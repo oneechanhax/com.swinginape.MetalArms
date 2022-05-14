@@ -8,7 +8,11 @@
     "finish-args": [
       "--socket=x11",
       "--socket=pulseaudio",
-      "--device=all"
+      "--device=all",
+      "--socket=pulseaudio",
+      "--share=ipc",
+      "--allow=bluetooth",
+      "--talk-name=org.freedesktop.ScreenSaver"
     ],
     "modules": [
         {
