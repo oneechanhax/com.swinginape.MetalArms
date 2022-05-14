@@ -1,3 +1,7 @@
+Metal arms LoD patch credits goto zstorm4   
+All other sources from flatpak have their respective licences.
+All code by oneechanhax is Licensed under GPL3+   
+   
 # How to connect your Wii remotes
 
 Dolphin offers three different methods to play your games using real Wii remotes.
