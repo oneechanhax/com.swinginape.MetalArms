@@ -232,10 +232,11 @@
                 "mv metal-arms-extracted/files/mettlearms_gc.mst metal-arms-extracted/files/mettlearms_gc.mst.orig",
                 "sha256sum metal-arms-extracted/files/mettlearms_gc.mst.orig",
                 "bspatch metal-arms-extracted/files/mettlearms_gc.mst.orig metal-arms-extracted/files/mettlearms_gc.mst mettlearms_gc.mst.lod-patch.bspatch",
-                "sha256sum metal-arms-extracted/files/mettlearms_gc.mst",
-                "echo Expected sha256sum \"33e497de06e876cd326631e62cbc7fa56c8340996d48d227760d186f9c9b6bc7\" Ensure it is correct!",
-                "rm metal-arms-extracted/files/mettlearms_gc.mst.orig",
-                "nodtool makegcn metal-arms-extracted/ /app/metal-arms.iso"
+                "echo Expected sha256sum \"$(sha256sum metal-arms-extracted/files/mettlearms_gc.mst)\" to equal \"33e497de06e876cd326631e62cbc7fa56c8340996d48d227760d186f9c9b6bc7\" Ensure it is correct!",
+                "rm metal-arms-extracted/files/mettlearms_gc.mst.orig metal-arms-extracted/sys/bi2.bin",
+                "mv bi2.bin.nod-extraction-fix metal-arms-extracted/sys/bi2.bin",
+                "mv fst.bin.nod-extraction-fix metal-arms-extracted/sys/fst.bin",
+                "mv metal-arms-extracted/ /app/metal-arms"
             ],
             "sources": [
                 {
@@ -245,7 +246,18 @@
                 {
                     "type": "file",
                     "path": "mettlearms_gc.mst.lod-patch.bspatch"
+                },
+                {
+                    "type": "file",
+                    "path": "bi2.bin.nod-extraction-fix",
+                    "sha256": "4f3d218d9f44bc49a4b7694a2d233d4f4bf7283c061c2215df7f216fe7268402"
+                },
+                {
+                    "type": "file",
+                    "path": "fst.bin.nod-extraction-fix",
+                    "sha256": "5b5ab10dde41e8c09431c7b649495a9daf803eaf77da9bd4ad63f149810e2d83"
                 }
+
             ]
         },
         {
